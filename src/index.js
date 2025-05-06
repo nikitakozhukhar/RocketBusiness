@@ -6,4 +6,5 @@ import './styles/mobile.scss'
 
 import './js/app';
 import './js/insertSVG';
+import './js/slider';
 
