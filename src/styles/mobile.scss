@@ -1,0 +1,207 @@
+@media (max-width: 959px){
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 360px;
+
+    .video {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom:  96px;
+
+      .video_preview {
+        width: 100%;
+      }
+
+      .video_button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 11px;
+        width: 169px;
+        height: 33px;
+        font-size: 14px;
+        font-weight: 500;
+        transform: skewX(-20deg);
+      }
+
+      .plaiIcon {
+        padding-top: 1px;
+      }
+
+    }
+
+    .cards-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 16px;
+      border: 1px solid red;
+
+    
+
+      .card_image {
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      .card_header {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        top: 0px;
+        color:white;
+      }
+
+      .card_header__left {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .card_title {
+        font-size: 20px;
+        font-weight: 600
+      }
+
+      .cards_promo {
+        display: flex;
+        gap: 4px;
+      }
+
+      .card_promo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .card_promo__sale {
+        
+        background-color: #18C576;
+        width: 56px;
+        height: 23px;
+      }
+
+      
+      .card_promo__day {
+        background-color: #FFA726;
+        width: 83px;
+        height: 23px;
+      }
+
+      .card_promo__sellout {
+        background-color: #39B0F4;
+        width: 83px;
+        height: 23px;
+      }
+
+      .card_promo__hit {
+        background-color: #AC59F1;
+        width: 44px;
+        height: 23px;
+      }
+
+
+      .svg-icon {
+        transition: all 0.3s ease;
+        color: white; 
+      }
+      
+
+      .card_footer {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        align-items: center;
+        padding-bottom: 16px;
+        bottom: 2px;
+        color:white;
+      }
+
+      .card_price {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .card_application { 
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        padding: 13px;
+        color: white;
+        background-color: #18C576;
+        border: none;
+        border-radius: 5px;
+      }
+
+    }
+
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 20px 0;
+  }
+  .slider-track {
+      display: flex;
+      transition: transform 0.3s ease;
+      padding: 0 15%;
+  }
+  .product-card {
+      position: relative;
+      flex: 0 0 80%;
+      margin-right: 20px;
+      background: white;
+      transition: opacity 0.3s ease;
+  }
+  
+  .product-card__image {
+      width: 230px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 22px;
+  }
+ 
+  .slider-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  }
+  .slider-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #000;
+      margin: 0 4px;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+  }
+  .slider-dot.active {
+      opacity: 1;
+  }
+
+  .card_header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    top: 0;
+  }
+
+  }
+}

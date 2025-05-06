@@ -1,0 +1,22 @@
+visa.png
+  source: http://flordemayo.ru/images/companies/1/logos.png
+
+discover.png
+  source: http://flordemayo.ru/images/companies/1/logos.png
+
+diners-club.png
+  source: http://flordemayo.ru/images/companies/1/logos.png
+
+mir.png
+  source: http://flordemayo.ru/images/companies/1/logos.png
+
+american-express.png
+  source: http://flordemayo.ru/images/companies/1/logos.png
+
+jcb.png
+  source: http://flordemayo.ru/images/companies/1/logos.png
+
+mastercard.png
+  source: http://flordemayo.ru/images/companies/1/logos.png
+
+  
