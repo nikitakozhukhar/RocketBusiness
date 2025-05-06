@@ -1,6 +1,6 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/4o92rx83d0055lq4?svg=true)](https://ci.appveyor.com/project/nikitakozhukhar/samediacategory)
+[![Build status](https://ci.appveyor.com/api/projects/status/xslgwkf6ff416rxh?svg=true)](https://ci.appveyor.com/project/nikitakozhukhar/rocketbusiness)
 
-https://nikitakozhukhar.github.io/samediaCategory/ - посмотреть результат на GH-Pages
+https://nikitakozhukhar.github.io/RocketBusiness/ - посмотреть результат на GH-Pages
 
 # Тестовое задание для RocketBusiness.
 
