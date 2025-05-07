@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 $primary-color: #efeeee;
+$primary: #18C576;
+$text-color: #ffffff;
+$day-product: #FFA726;
+$hit-product: #AC59F1;
+$sellout-product: #39B0F4;
 
 
 * {
@@ -9,4 +14,45 @@ $primary-color: #efeeee;
 body {
   font-family: Inter, sans-serif;
   background-color: $primary-color;
+}
+
+.cards_promo {
+  display: flex;
+  gap: 4px;
+}
+
+.card_promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card_promo__sale {
+  
+  background-color: $primary;
+  width: 56px;
+  height: 23px;
+}
+
+
+.card_promo__day {
+  background-color: $day-product;
+  width: 83px;
+  height: 23px;
+}
+
+.card_promo__sellout {
+  background-color: $sellout-product;
+  width: 83px;
+  height: 23px;
+}
+
+.card_promo__hit {
+  background-color: $hit-product;
+  width: 44px;
+  height: 23px;
 }

@@ -9,15 +9,16 @@ $sellout-product: #39B0F4;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
-    max-width: 360px;
+    margin: 48px 0px 0px 6px;
+    max-width: 331px;
+    
 
     .video {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom:  96px;
+      margin-bottom:  94px;
 
       .video_preview {
         width: 100%;
@@ -29,14 +30,14 @@ $sellout-product: #39B0F4;
         justify-content: center;
         align-items: center;
         gap: 11px;
-        width: 169px;
-        height: 33px;
-        font-size: 14px;
+        width: 177px;
+        height: 34px;
+        font-size: 15px;
         font-weight: 500;
         transform: skewX(-20deg);
       }
 
-      .plaiIcon {
+      .playIcon {
         padding-top: 1px;
       }
 
@@ -47,9 +48,7 @@ $sellout-product: #39B0F4;
       display: flex;
       flex-direction: column;
       width: 100%;
-      margin-bottom: 16px;
-      border: 1px solid red;
-
+      margin-bottom: 13px;
     
 
       .card_image {
@@ -62,7 +61,8 @@ $sellout-product: #39B0F4;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 10px;
+        padding-top: 7px;
+        padding-left: 14px;
         top: 0px;
         color: $text-color;
       }
@@ -70,7 +70,7 @@ $sellout-product: #39B0F4;
       .card_header__left {
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 12px;
       }
 
       .card_title {
@@ -78,53 +78,51 @@ $sellout-product: #39B0F4;
         font-weight: 600
       }
 
-      .cards_promo {
-        display: flex;
-        gap: 4px;
-      }
+      // .cards_promo {
+      //   display: flex;
+      //   gap: 4px;
+      // }
 
-      .card_promo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 5px;
-        border-radius: 50px;
-        font-size: 12px;
-        font-weight: 600;
-      }
+      // .card_promo {
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   padding: 0 5px;
+      //   border-radius: 50px;
+      //   font-size: 12px;
+      //   font-weight: 600;
+      // }
 
-      .card_promo__sale {
+      // .card_promo__sale {
         
-        background-color: $primary;
-        width: 56px;
-        height: 23px;
-      }
+      //   background-color: $primary;
+      //   width: 56px;
+      //   height: 23px;
+      // }
 
       
-      .card_promo__day {
-        background-color: $day-product;
-        width: 83px;
-        height: 23px;
-      }
+      // .card_promo__day {
+      //   background-color: $day-product;
+      //   width: 83px;
+      //   height: 23px;
+      // }
 
-      .card_promo__sellout {
-        background-color: $sellout-product;
-        width: 83px;
-        height: 23px;
-      }
+      // .card_promo__sellout {
+      //   background-color: $sellout-product;
+      //   width: 83px;
+      //   height: 23px;
+      // }
 
-      .card_promo__hit {
-        background-color: $hit-product;
-        width: 44px;
-        height: 23px;
-      }
-
+      // .card_promo__hit {
+      //   background-color: $hit-product;
+      //   width: 44px;
+      //   height: 23px;
+      // }
 
       .svg-icon {
         transition: all 0.3s ease;
         color: $text-color; 
       }
-      
 
       .card_footer {
         position: absolute;
@@ -133,8 +131,8 @@ $sellout-product: #39B0F4;
         flex-direction: column;
         gap: 11px;
         align-items: center;
-        padding-bottom: 16px;
-        bottom: 2px;
+        padding-bottom: 23px;
+        bottom: 0px;
         color: $text-color;
       }
 
@@ -147,26 +145,32 @@ $sellout-product: #39B0F4;
         display: flex;
         justify-content: center;
         width: 90%;
-        padding: 13px;
+        height: 30px;
+        padding: 3px;
         color: $text-color;
         background-color: $primary;
         border: none;
         border-radius: 5px;
+        font-size: 13px;
       }
 
-    }
+      // 1199494.06
 
+    }
     .slider-container {
+      // display: flex;
+      // flex-direction: row;
       width: 100%;
       overflow: hidden;
       position: relative;
       padding: 20px 0;
-  }
-  .slider-track {
-      display: flex;
-      transition: transform 0.3s ease;
-      padding: 0 15%;
-  }
+    }
+    .slider-track {
+        display: flex;
+        flex-direction: row;
+        transition: transform 0.3s ease;
+        padding: 0 15%;
+    }
   .product-card {
       position: relative;
       flex: 0 0 80%;
@@ -210,5 +214,9 @@ $sellout-product: #39B0F4;
     top: 0;
   }
 
+  .slider-cards-promo {
+    display: flex;
+    flex-direction: column;
+  }
   }
 }
