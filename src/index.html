@@ -7,92 +7,161 @@
     <title>Test task</title>
   </head>
   <body>
-    <d iv class="container">
+    <div class="container">
       <section class="video">
-        <img class="video_preview" src="./img/mobileVideoPreviev.png" alt="">
-        <button class="video_button button">Смотреть видео <span class="playIcon"></span></button>
-      </section> 
-      
-      <div class="cards-container">
-        <div class="card">
-          <img class="card_image" src="./img/peas.png" alt="Горох в стручках">
-          <div class="card_header">
-            <div class="card_header__left">
-              <div class="card_title">Горох в стручках, 1кг</div>
-              <div class="cards_promo">
-                <div class="card_promo card_promo__sale">-29%</div>
-                <div class="card_promo card_promo__day">Товар дня</div>
+        <picture>
+          <source
+            srcset="./img/desktopVideoPreview.png"
+            media="(min-width: 1440px)"
+          />
+          <source
+            srcset="./img/tabletVideoPreview.png.png"
+            media="(min-width: 960px) and (max-width: 1439px)"
+          />
+          <source
+            srcset="./img/mobileVideoPreviev.png"
+            media="(max-width: 959px)"
+          />
+          <img
+            class="video_preview"
+            src="./img/mobileVideoPreviev.png"
+            alt="превью видео ролика"
+          />
+        </picture>
+        <button class="video_button button">
+          Смотреть видео <span class="playIcon"></span>
+        </button>
+      </section>
+
+      <div class="tablet-container">
+        <div class="left-col">
+          <div class="cards-container">
+            <div class="card">
+              <img
+                class="card_image"
+                src="./img/peas.png"
+                alt="Горох в стручках"
+              />
+              <div class="card_header">
+                <div class="card_header__left">
+                  <div class="card_title">Горох в стручках, 1кг</div>
+                  <div class="cards_promo">
+                    <div class="card_promo card_promo__sale">-29%</div>
+                    <div class="card_promo card_promo__day">Товар дня</div>
+                  </div>
+                </div>
+                <div class="card_header__right">
+                  <div class="card_favourite"></div>
+                  <div class="card_eye"></div>
+                </div>
+              </div>
+              <div class="card_footer">
+                <div class="card_price">570 <span>₽</span></div>
+                <div class="card_application">Оставить заявку</div>
               </div>
             </div>
-            <div class="card_header__right">
-              <div class="card_favourite"></div>
-              <div class="card_eye"></div>
-            </div>
-          </div>
-          <div class="card_footer">
-            <div class="card_price">570 <span>₽</span></div>
-            <div class="card_application">Оставить заявку</div>
           </div>
         </div>
-      </div>
-
-      <div class="cards-container">
-        <div class="card">
-          <img class="card_image" src="./img/blueberry.png" alt="Голубика лесная">
-          <div class="card_header">
-            <div class="card_header__left">
-              <div class="card_title">Голубика лесная, 200гр</div>
-              <div class="cards_promo">
-                <div class="card_promo card_promo__sale">-31%</div>
-                <div class="card_promo card_promo__sellout">Распродажа</div>
+        <div class="middle-col">
+          <div class="cards-container">
+            <div class="card">
+              <img
+                class="card_image"
+                src="./img/blueberry.png"
+                alt="Голубика лесная"
+              />
+              <div class="card_header">
+                <div class="card_header__left">
+                  <div class="card_title">Голубика лесная, 200гр</div>
+                  <div class="cards_promo">
+                    <div class="card_promo card_promo__sale">-31%</div>
+                    <div class="card_promo card_promo__sellout">Распродажа</div>
+                  </div>
+                </div>
+                <div class="card_header__right">
+                  <div class="card_favourite"></div>
+                  <div class="card_eye"></div>
+                </div>
+              </div>
+              <div class="card_footer">
+                <div class="card_price">140 <span>₽</span></div>
+                <div class="card_application">Оставить заявку</div>
               </div>
             </div>
-            <div class="card_header__right">
-              <div class="card_favourite"></div>
-              <div class="card_eye"></div>
-            </div>
           </div>
-          <div class="card_footer">
-            <div class="card_price">140 <span>₽</span></div>
-            <div class="card_application">Оставить заявку</div>
-          </div>
-        </div>
-      </div>
 
-      <div class="cards-container">
-        <div class="card">
-          <img class="card_image" src="./img/carrot.png" alt="Морковь мытая">
-          <div class="card_header">
-            <div class="card_header__left">
-              <div class="card_title">Морковь мытая, 1кг</div>
-              <div class="cards_promo">
-                <div class="card_promo card_promo__hit">Хит</div>
+          <div class="cards-container">
+            <div class="card">
+              <img
+                class="card_image"
+                src="./img/carrot.png"
+                alt="Морковь мытая"
+              />
+              <div class="card_header">
+                <div class="card_header__left">
+                  <div class="card_title">Морковь мытая, 1кг</div>
+                  <div class="cards_promo">
+                    <div class="card_promo card_promo__hit">Хит</div>
+                  </div>
+                </div>
+                <div class="card_header__right">
+                  <div class="card_favourite"></div>
+                  <div class="card_eye"></div>
+                </div>
+              </div>
+              <div class="card_footer">
+                <div class="card_price">140 <span>₽</span></div>
+                <div class="card_application">Оставить заявку</div>
               </div>
             </div>
-            <div class="card_header__right">
-              <div class="card_favourite"></div>
-              <div class="card_eye"></div>
-            </div>
-          </div>
-          <div class="card_footer">
-            <div class="card_price">140 <span>₽</span></div>
-            <div class="card_application">Оставить заявку</div>
           </div>
         </div>
-      </div>
-
-      <!-- маленькие карточки -->
-      <div class="slider-container" id="slider">
-        
-        <div class="slider-track" id="track">
-            <div class="product-card">
-                <img src="./img/popCorn.png" alt="Попкорн" class="product-card__image">
-                <h3 class="product-card__title">Попкорн соленый, для СВЧ-печи, 120г</h3>
+        <div class="right-col">
+          <!-- слайдер для мобильной версии -->
+          <div class="slider-container" id="slider">
+            <div class="slider-track" id="track">
+              <div class="product-card">
+                <img
+                  src="./img/popCorn.png"
+                  alt="Попкорн"
+                  class="product-card__image"
+                />
+                <h3 class="product-card__title">
+                  Попкорн соленый, для СВЧ-печи, 120г
+                </h3>
                 <p class="product-card__price">160 ₽</p>
                 <div class="card_application">Оставить заявку</div>
                 <div class="card_header">
                   <div class="card_header__left">
-                    <div class="card_title">Морковь мытая, 1кг</div>
+                    <div class="cards_promo slider-cards-promo">
+                      <div class="card_promo card_promo__day slider-card-promo">
+                        Товар дня
+                      </div>
+                      <div
+                        class="card_promo card_promo__sale slider-card-promo"
+                      >
+                        -29%
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card_header__right">
+                    <div class="card_favourite"></div>
+                    <div class="card_eye"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <img
+                  src="./img/iceCream.png"
+                  alt="Эскимо"
+                  class="product-card__image"
+                />
+                <h3 class="product-card__title">Эскимо с малиной, 150 г</h3>
+                <p class="product-card__price">160 ₽</p>
+                <div class="card_application">Оставить заявку</div>
+                <div class="card_header">
+                  <div class="card_header__left">
                     <div class="cards_promo">
                       <div class="card_promo card_promo__hit">Хит</div>
                     </div>
@@ -102,19 +171,13 @@
                     <div class="card_eye"></div>
                   </div>
                 </div>
+              </div>
             </div>
-            <div class="product-card">
-              <img src="./img/iceCream.png" alt="Эскимо" class="product-card__image">
-              <h3 class="product-card__title">Эскимо с малиной, 150 г</h3>
-              <p class="product-card__price">160 ₽</p>
-              <div class="card_application">Оставить заявку</div>
-          </div>
-          
-        </div>
-      
-        <div class="slider-dots" id="dots"></div>
-    </div>
 
+            <div class="slider-dots" id="dots"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
