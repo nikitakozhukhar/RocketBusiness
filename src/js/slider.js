@@ -3,10 +3,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const dotsContainer = document.getElementById('dots');
     const cards = document.querySelectorAll('.product-card');
 
+    const tabletMediaQuery = window.matchMedia('(min-width: 960px) and (max-width: 1439px)');
+    
+    if (tabletMediaQuery.matches) {
+        // Для планшета - отключаем слайдер
+        const sliderTrack = document.getElementById('track');
+        if (sliderTrack) {
+            sliderTrack.style.transform = 'none';
+            
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                card.style.opacity = '1';
+                card.style.flex = '0 0 calc(50% - 10px)';
+            });
+            
+            const dots = document.getElementById('dots');
+            if (dots) dots.style.display = 'none';
+        }
+        return;
+    }
+
 
     let currentSlide = 0;
-    const cardWidth = cards[0].offsetWidth + 20; // ширина карточки + margin
-    //   const visibleCards = 1.5; // видно 1.5 карточки
+    const cardWidth = cards[0].offsetWidth + 20; 
 
     // Инициализация точек
     function initDots() {
@@ -46,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let isDragging = false;
 
     track.addEventListener('touchstart', (e) => {
+        console.log(e)
         startX = e.touches[0].clientX;
         isDragging = true;
     });
