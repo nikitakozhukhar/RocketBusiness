@@ -16,6 +16,29 @@ body {
   background-color: $primary-color;
 }
 
+.cards-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 7px;
+  padding-left: 14px;
+  top: 0px;
+  color: $text-color;
+}
+
 .cards_promo {
   display: flex;
   gap: 4px;
@@ -32,7 +55,6 @@ body {
 }
 
 .card_promo__sale {
-  
   background-color: $primary;
   width: 56px;
   height: 23px;
@@ -47,8 +69,9 @@ body {
 
 .card_promo__sellout {
   background-color: $sellout-product;
-  width: 83px;
+  width: 98px;
   height: 23px;
+  padding: 0 10px 0 10px;
 }
 
 .card_promo__hit {
