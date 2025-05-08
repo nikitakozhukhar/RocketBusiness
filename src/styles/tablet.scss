@@ -45,12 +45,25 @@ $sellout-product: #39b0f4;
       flex-wrap: wrap;
       max-width: 785px;
       gap: 20px;
+
+      .card_title {
+        font-size: 21px;
+      }
+
+      .card_header__right {
+        padding: 7px 12px 0 0;
+      }
+    }
+
+    .tablete-hide {
+      display: none;
     }
 
     .card_image {
       width: 382px;      
       border-radius: 5px;
     }
+
     .card_image.peas {
       height: 328px;
       object-fit: cover;
@@ -60,22 +73,77 @@ $sellout-product: #39b0f4;
       gap: 10px;
     }
 
+    .cards_promo-tablet {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card_price {
+      align-self: flex-end;
+      margin-bottom: 10px;
+      color: $text-color;
+      font-size: 20px;
+    }
+    
+    .card_application {
+      display: flex;
+      align-self: flex-end;
+      align-items: center;
+      justify-content: center;
+      width: 141px;
+      height: 32px;
+      border-radius: 5px;
+      background-color: $primary;
+      color: $text-color;
+      font-size: 12px;
+    }
+
     .left-col {
       width: 382px;
     }
 
     .middle-col {
       display: flex;
-      order: 3
+      gap: 20px;
+      order: 3;
+
+      .card_image {
+        height: 154px;
+      }
+    }
+
+    .card_footer {
+      justify-content: space-between;
+      gap: 15px;
+      padding: 0 15px 0 15px;
+      bottom: 10px
     }
 
     .right-col {
       width: 362px;
+      height: 328px;
+
+      .product-card__title {
+        margin: 13px;
+        font-size: 14px;
+      }
+
+      .product-card__price {
+        align-self: center;
+        margin: 11px;
+        font-size: 20px;
+      }
+
+      .card_application {
+        width: 150px;
+        align-self: center;
+      }
     }
 
     .slider-track {
       display: flex;
-      
+      gap:20px;
     }
 
     .product-card {

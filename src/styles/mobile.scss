@@ -136,7 +136,13 @@ $sellout-product: #39b0f4;
         padding-bottom: 14px;
         bottom: 0px;
         color: $text-color;
+
+        .cards_promo-tablet {
+          display: none;
+        }
       }
+
+     
 
       .card_price {
         font-size: 20px;
