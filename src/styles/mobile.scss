@@ -253,6 +253,10 @@ $sellout-product: #39b0f4;
 
     .card_header__left-slider {
       padding-top: 6px;
+
+      .mobile-hide {
+        display: none;
+      }
     }
 
     .card_header__right-slider {
@@ -260,6 +264,8 @@ $sellout-product: #39b0f4;
       flex-direction: column;
       gap: 10px;
       padding: 5px 13px 0 0;
+
+      
     }
 
     .slider-cards-promo {
