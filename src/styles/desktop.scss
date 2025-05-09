@@ -43,10 +43,121 @@ $sellout-product: #39b0f4;
     .desktop-container {
       display: flex;
       width: 1200px;
-      gap: 79px;
+      gap: 17px;
     }
-    
 
+    .desktop-hide {
+      display: none;
+    }
+
+    .cards-container {
+      
+    }
+
+    .card_title {
+      font-size: 21px;
+    }
+
+    .card_header__right {
+      padding-top: 6px;
+      padding-right: 15px;
+    }
+
+    .left-col {
+
+      .card_image {
+        width: 387px;
+        height: 328px;
+        object-fit: cover;
+      }
+
+    }
+
+    .middle-col {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
     
+      .card_image {
+        width: 387px;
+        height: 154px;
+        object-fit: cover;
+      }
+    }
+
+    .right-col {
+      .slider-track {
+        display: flex;
+        gap: 20px;
+      }
+      .product-card__image {
+        width: 184px;
+        height: 183px;
+      }
+      .cards_promo {
+        display: flex;
+        flex-direction: column;
+      }
+      .product-card__title {
+        margin-top: 13px;
+        margin-bottom: 6px;
+        margin-left: 16px;
+        padding-right: 18px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      .product-card__price {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .card_application {
+        display: flex;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        width: 160px;
+        height: 32px;
+        border-radius: 5px;
+        background-color: $primary;
+        color: $text-color;
+        font-size: 12px;
+      }
+    }
+
+    .card_footer {
+      bottom: 10px;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0 15px 5px 15px;
+
+      .cards_promo {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .card_price {
+        align-self: flex-end;
+        margin-bottom: 4px;
+        color: $text-color;
+        font-size: 20px;
+      }
+
+      .card_application {
+        display: flex;
+        align-self: flex-end;
+        align-items: center;
+        justify-content: center;
+        width: 136px;
+        height: 32px;
+        border-radius: 5px;
+        background-color: $primary;
+        color: $text-color;
+        font-size: 12px;
+      }
+    }
   }
 }

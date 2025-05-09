@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const dotsContainer = document.getElementById('dots');
     const cards = document.querySelectorAll('.product-card');
 
-    const tabletMediaQuery = window.matchMedia('(min-width: 960px) and (max-width: 1439px)');
+    const tabletAndDesktopMediaQuery = window.matchMedia('(min-width: 960px)');
     
-    if (tabletMediaQuery.matches) {
+    if (tabletAndDesktopMediaQuery.matches) {
         // Для планшета - отключаем слайдер
         const sliderTrack = document.getElementById('track');
         if (sliderTrack) {
