@@ -91,7 +91,9 @@
               <div class="card_footer">
                 <div class="cards_promo cards_promo-tablet">
                   <div class="card_promo card_promo__sale">-29%</div>
-                  <div class="card_promo card_promo__day tablete-hide desktop-hide">
+                  <div
+                    class="card_promo card_promo__day tablete-hide desktop-hide"
+                  >
                     Товар дня
                   </div>
                   <div class="card_promo card_promo__sellout">Распродажа</div>
@@ -124,10 +126,14 @@
               <div class="card_footer">
                 <div class="cards_promo cards_promo-tablet">
                   <div class="card_promo card_promo__hit">Хит</div>
-                  <div class="card_promo card_promo__sale tablete-hide desktop-hide">
+                  <div
+                    class="card_promo card_promo__sale tablete-hide desktop-hide"
+                  >
                     -29%
                   </div>
-                  <div class="card_promo card_promo__day tablete-hide desktop-hide">
+                  <div
+                    class="card_promo card_promo__day tablete-hide desktop-hide"
+                  >
                     Товар дня
                   </div>
                 </div>
@@ -167,7 +173,11 @@
                       >
                         -29%
                       </div>
-                      <div class="card_promo card_promo__hit mobile-hide desktop-hide">Хит</div>
+                      <div
+                        class="card_promo card_promo__hit mobile-hide desktop-hide"
+                      >
+                        Хит
+                      </div>
                     </div>
                   </div>
                   <div class="card_header__right card_header__right-slider">
@@ -207,5 +217,30 @@
         </div>
       </div>
     </div>
+
+    <form class="form hide-form">
+      <div class="form_container">
+        <div class="form_header">
+          <h2 class="form_title">Оставьте заявку</h2>
+          <buttin class="form_close">X</buttin>
+        </div>
+        <div class="form_input-area">
+          <input class="form_input" type="text" placeholder="Ваше имя" />
+          <div class="error_message">Поле не заполнено</div>
+        </div>
+        <div class="form_input-area">
+          <input class="form_input" type="phone" placeholder="Номер телефона" />
+          <div class="error_message">Поле не заполнено</div>
+        </div>
+
+        <div class="form_footer">
+          <input class="form_footer_checkbox" type="checkbox" name="porsonalData" />
+          <label class="form_footer_personal" for="porsonalData"
+            >Я соглашаюсь на обработку персональных данных</label
+          >
+          <button class="form_footer_button btn-disabled">Отправить</button>
+        </div>
+      </div>
+    </form>
   </body>
 </html>
