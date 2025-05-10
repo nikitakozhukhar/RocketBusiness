@@ -25,6 +25,7 @@ $btn-active: #18c576;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       margin-bottom: 34px;
 
       .form_title {
@@ -32,7 +33,31 @@ $btn-active: #18c576;
         font-weight: 500;
       }
       .form_close {
+        border: none;
         cursor: pointer;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0px;
+          right: 10px;
+          display: block;
+          width: 1px;
+          height: 20px;
+          background-color: $text-color;
+          transform: rotate(-45deg)
+        }
+         &:after {
+          content: '';
+          position: absolute;
+          top: 0px;
+          right: 10px;
+          display: block;
+          width: 1px;
+          height: 20px;
+          background-color: $text-color;
+          transform: rotate(45deg);
+        }
       }
     }
 
@@ -49,7 +74,7 @@ $btn-active: #18c576;
       color: $text-color;
 
       &:focus {
-        border-color: $btn-active;
+        border-color: $text-color;
         outline: none;
       }
     }
@@ -57,11 +82,16 @@ $btn-active: #18c576;
     .error {
       border: 1px solid $error-color;
     }
+
     .error_message {
       display: none;
       padding-left: 12px ;
       font-size: 10px ;
-      color:$error-color
+      color: $error-color
+    }
+
+    .error_text {
+      color: $error-color;
     }
 
     .form_footer {
