@@ -10,4 +10,5 @@ import './styles/form.scss'
 import './js/app';
 import './js/insertSVG';
 import './js/slider';
+import './js/formActions'
 

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Test task</title>
   </head>
-  <body>
+  <body class="body">
     <div class="container">
       <section class="video">
         <picture>
@@ -225,20 +225,18 @@
           <buttin class="form_close">X</buttin>
         </div>
         <div class="form_input-area">
-          <input class="form_input" type="text" placeholder="Ваше имя" />
-          <div class="error_message">Поле не заполнено</div>
+          <input class="form_input name_input" type="text" placeholder="Ваше имя" id="name"/>
+          <div class="error_message name_input-error">Поле не заполнено</div>
         </div>
         <div class="form_input-area">
-          <input class="form_input" type="phone" placeholder="Номер телефона" />
-          <div class="error_message">Поле не заполнено</div>
+          <input class="form_input phone_input" type="tel" placeholder="+7 (xxx) xxx xx xx" id="phone"/>
+          <div class="error_message phone_input-error">Поле не заполнено</div>
         </div>
 
         <div class="form_footer">
-          <input class="form_footer_checkbox" type="checkbox" name="porsonalData" />
-          <label class="form_footer_personal" for="porsonalData"
-            >Я соглашаюсь на обработку персональных данных</label
-          >
-          <button class="form_footer_button btn-disabled">Отправить</button>
+          <input class="form_footer_checkbox" type="checkbox" name="porsonalData">
+          <label class="form_footer_personal" for="porsonalData">Я соглашаюсь на обработку персональных данных</label>
+          <button class="form_footer_button">Отправить</button>
         </div>
       </div>
     </form>
