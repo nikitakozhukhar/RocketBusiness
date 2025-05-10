@@ -58,6 +58,7 @@ $btn-active: #18c576;
       border: 1px solid $error-color;
     }
     .error_message {
+      display: none;
       padding-left: 12px ;
       font-size: 10px ;
       color:$error-color
@@ -97,6 +98,6 @@ $btn-active: #18c576;
 }
 
 .hide-form {
-  // display: none;
+  display: none;
 }
  
