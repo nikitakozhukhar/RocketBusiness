@@ -8,7 +8,7 @@
   </head>
   <body class="body">
     <div class="container">
-      <section class="video">
+      <div class="video">
         <picture>
           <source
             srcset="./img/desktopVideoPreview.png"
@@ -31,7 +31,18 @@
         <button class="video_button button">
           Смотреть видео <span class="playIcon"></span>
         </button>
-      </section>
+        <div class="modal hide-frame" id="videoModal">
+          <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <iframe
+              sandbox="allow-same-origin"
+              class="video-frame"
+              id="videoFrame"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
 
       <div class="tablet-container desktop-container">
         <div class="left-col">
@@ -61,7 +72,7 @@
                   <div class="card_promo card_promo__day">Товар дня</div>
                 </div>
                 <div class="card_price">570 <span>₽</span></div>
-                <div class="card_application">Оставить заявку</div>
+                <button class="card_application">Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -99,7 +110,7 @@
                   <div class="card_promo card_promo__sellout">Распродажа</div>
                 </div>
                 <div class="card_price">140 <span>₽</span></div>
-                <div class="card_application">Оставить заявку</div>
+                <button class="card_application">Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -138,7 +149,7 @@
                   </div>
                 </div>
                 <div class="card_price">140 <span>₽</span></div>
-                <div class="card_application">Оставить заявку</div>
+                <button class="card_application">Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -157,9 +168,9 @@
                   Попкорн соленый, для СВЧ-печи, 120г
                 </h3>
                 <p class="product-card__price">160 ₽</p>
-                <div class="card_application card_application-slider">
+                <button class="card_application card_application-slider">
                   Оставить заявку
-                </div>
+                </button>
                 <div class="card_header">
                   <div class="card_header__left card_header__left-slider">
                     <div class="cards_promo slider-cards-promo">
@@ -195,9 +206,9 @@
                 />
                 <h3 class="product-card__title">Эскимо с малиной, 150 г</h3>
                 <p class="product-card__price">160 ₽</p>
-                <div class="card_application card_application-slider">
+                <button class="card_application card_application-slider">
                   Оставить заявку
-                </div>
+                </button>
                 <div class="card_header">
                   <div class="card_header__left card_header__left-slider">
                     <div class="cards_promo">
@@ -222,20 +233,39 @@
       <div class="form_container">
         <div class="form_header">
           <h2 class="form_title">Оставьте заявку</h2>
-          <buttin class="form_close">X</buttin>
+          <button class="form_close"></button>
         </div>
         <div class="form_input-area">
-          <input class="form_input name_input" type="text" placeholder="Ваше имя" id="name"/>
-          <div class="error_message name_input-error">Поле не заполнено</div>
+          <input
+            class="form_input name_input"
+            type="text"
+            placeholder="Ваше имя"
+          />
+          <div class="error_message name_input-error">
+            Введите данные в правильном формате
+          </div>
         </div>
         <div class="form_input-area">
-          <input class="form_input phone_input" type="tel" placeholder="+7 (xxx) xxx xx xx" id="phone"/>
-          <div class="error_message phone_input-error">Поле не заполнено</div>
+          <input
+            class="form_input phone_input"
+            type="tel"
+            placeholder="+7 (xxx) xxx xx xx"
+          />
+          <div class="error_message phone_input-error">
+            Введите номер телефона как в подсказке
+          </div>
         </div>
 
         <div class="form_footer">
-          <input class="form_footer_checkbox" type="checkbox" name="porsonalData">
-          <label class="form_footer_personal" for="porsonalData">Я соглашаюсь на обработку персональных данных</label>
+          <input
+            class="form_footer_checkbox"
+            type="checkbox"
+            name="personalData"
+            id="personalData"
+          />
+          <label class="form_footer_personal" for="personalData"
+            >Я соглашаюсь на обработку персональных данных</label
+          >
           <button class="form_footer_button">Отправить</button>
         </div>
       </div>
