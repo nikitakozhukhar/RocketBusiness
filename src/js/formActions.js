@@ -27,7 +27,7 @@ function disabledDelay(delay) {
     formBtn.classList.remove('btn-disabled');
     formBtn.removeAttribute('disabled')
   }, delay)
-} 
+}
 
 
 function formInputValidation() {
@@ -103,8 +103,3 @@ function submiteForm(e) {
 openFormBtns.forEach(openBtn => openBtn.addEventListener('click', openForm));
 closeFormBtn.addEventListener('click', closeForm);
 form.addEventListener('submit', submiteForm);
-
-
-
-
-
