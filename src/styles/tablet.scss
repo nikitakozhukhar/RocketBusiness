@@ -39,6 +39,9 @@ $sellout-product: #39b0f4;
         font-weight: 500;
         transform: skewX(-20deg);
       }
+      .video__button_hidden {
+        display: none;
+      }
     }
 
     .products-grid {
@@ -214,6 +217,10 @@ $sellout-product: #39b0f4;
         background-color: $primary;
         color: $text-color;
         font-size: 12px;
+        
+        &:hover {
+          background-color: #1dae2c;
+        }
       }
     }
 

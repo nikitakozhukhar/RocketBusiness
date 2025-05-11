@@ -95,3 +95,23 @@ body {
 .card__application {
   cursor: pointer;
 }
+
+.modal__choice-src {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  .modal__video-button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    background-color: $primary;
+    color: $text-color;
+    cursor: pointer;
+  }
+}
+
+.modal__choice-src_hidden {
+  display: none;
+}

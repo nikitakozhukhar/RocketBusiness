@@ -1,8 +1,13 @@
 $primary-button: #18C576;
 
 .video__button {
+  position: relative;
   color: white;
   background-color: $primary-button;
   border: none;
   cursor: pointer;
+}
+
+.video__button_hidden {
+  display: none;
 }

@@ -36,9 +36,22 @@ $sellout-product: #39b0f4;
         font-weight: 500;
         transform: skewX(-20deg);
       }
+      
 
       .video__play-icon {
         padding-top: 1px;
+      }
+
+      .modal__choice-src {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .modal__choice-src_hidden {
+        display: none;
+      }
+      .video__button_hidden {
+        display: none;
       }
     }
 
@@ -190,13 +203,13 @@ $sellout-product: #39b0f4;
     }
 
     .product-card__header {
-        position: absolute;
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        padding-top: 10px;
-        padding-left: 14px;
-        color: $text-color;
+      position: absolute;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding-top: 10px;
+      padding-left: 14px;
+      color: $text-color;
     }
 
     .product-card__header-left {

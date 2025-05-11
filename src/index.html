@@ -31,14 +31,19 @@
         <button class="video__button">
           Смотреть видео <span class="video__play-icon"></span>
         </button>
+         <div class="modal__choice-src modal__choice-src_hidden">
+            <button class="modal__video-button" data-video="youtube">Смотреть с YouTube</button>
+            <button class="modal__video-button" data-video="rutube">Смотреть с RuTube</button>
+          </div>
         <div class="modal modal_hidden" id="videoModal">
+         
           <div class="modal__content">
             <span class="modal__close-btn" id="closeModalBtn">&times;</span>
             <iframe
-              sandbox="allow-same-origin"
               class="modal__video-frame"
               id="videoFrame"
               allowfullscreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           </div>
         </div>
