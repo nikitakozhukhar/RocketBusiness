@@ -24,7 +24,7 @@ $sellout-product: #39b0f4;
       width: 783px;
       height: 517px;
 
-      .video_button {
+      .video__button {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -40,53 +40,109 @@ $sellout-product: #39b0f4;
       }
     }
 
-    .desktop-container {
+    .products-grid {
       display: flex;
       width: 1200px;
       gap: 17px;
     }
 
-    .desktop-hide {
+    .card__promos_hide-desktop {
+      display: none;
+    }
+    .card__promo_hide-desktop {
       display: none;
     }
 
-    .card_title {
+    .card__title {
       font-size: 21px;
     }
 
-    .card_header__right {
+    .card__header-right {
       padding-top: 6px;
       padding-right: 15px;
     }
 
-    .left-col {
-
-      .card_image {
+    .products-grid__col_left {
+      .card__image {
         width: 387px;
         height: 328px;
         object-fit: cover;
-        border-radius: 5px
+        border-radius: 5px;
       }
-
     }
 
-    .middle-col {
+    .products-grid__col_middle {
       display: flex;
       flex-direction: column;
       gap: 17px;
-    
-      .card_image {
+
+      .card__image {
         width: 387px;
         height: 154px;
         object-fit: cover;
-        border-radius: 5px
+        border-radius: 5px;
       }
     }
 
-    .right-col {
-      .slider-track {
+    .card__footer {
+      bottom: 10px;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0 15px 5px 15px;
+
+      .card__promos {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .card__price {
+        align-self: flex-end;
+        margin-bottom: 4px;
+        color: $text-color;
+        font-size: 20px;
+      }
+
+      .card__application {
+        display: flex;
+        align-self: flex-end;
+        align-items: center;
+        justify-content: center;
+        width: 136px;
+        height: 32px;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary;
+        color: $text-color;
+        font-size: 12px;
+      }
+    }
+
+    .products-grid__col_right {
+      .slider__track {
         display: flex;
         gap: 20px;
+      }
+
+      .product-card__header {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 7px;
+        padding-left: 14px;
+        top: 0px;
+        color: $text-color;
+      }
+      .product-card__header-right {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 6px 12px 0 0;
+      }
+      .svg-icon {
+        transition: all 0.3s ease;
+        color: $text-color;
       }
 
       .product-card {
@@ -98,9 +154,36 @@ $sellout-product: #39b0f4;
         height: 183px;
         border-radius: 5px 5px 0px 0px;
       }
-      .cards_promo {
+      .product-card__promos {
         display: flex;
         flex-direction: column;
+      }
+      .card__promo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .product-card__promo_sale {
+        background-color: $primary;
+        width: 56px;
+        height: 23px;
+      }
+
+      .product-card__promo_day {
+        background-color: $day-product;
+        width: 83px;
+        height: 23px;
+      }
+
+      .product-card__promo_hit {
+        background-color: $hit-product;
+        width: 44px;
+        height: 23px;
       }
       .product-card__title {
         margin-top: 13px;
@@ -117,7 +200,7 @@ $sellout-product: #39b0f4;
         font-size: 20px;
         font-weight: 700;
       }
-      .card_application {
+      .product-card__application {
         display: flex;
         align-self: center;
         align-items: center;
@@ -131,39 +214,9 @@ $sellout-product: #39b0f4;
         color: $text-color;
         font-size: 12px;
       }
-    }
 
-    .card_footer {
-      bottom: 10px;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 0 15px 5px 15px;
-
-      .cards_promo {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-      }
-
-      .card_price {
-        align-self: flex-end;
-        margin-bottom: 4px;
-        color: $text-color;
-        font-size: 20px;
-      }
-
-      .card_application {
-        display: flex;
-        align-self: flex-end;
-        align-items: center;
-        justify-content: center;
-        width: 136px;
-        height: 32px;
-        border: none;
-        border-radius: 5px;
-        background-color: $primary;
-        color: $text-color;
-        font-size: 12px;
+      .product-card__promo_hide-desktop {
+        display: none;
       }
     }
   }
@@ -174,7 +227,7 @@ $sellout-product: #39b0f4;
     .form_container {
       align-self: center;
       width: 80vw;
-      
+
       .error_message {
         font-size: 14px;
       }

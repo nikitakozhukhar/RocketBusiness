@@ -18,7 +18,7 @@ body {
   background-color: $primary-color;
 }
 
-.cards-container {
+.card__container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ body {
   flex-direction: column;
 }
 
-.card_header {
+.card__header {
   position: absolute;
   width: 100%;
   display: flex;
@@ -41,12 +41,12 @@ body {
   color: $text-color;
 }
 
-.cards_promo {
+.card__promos {
   display: flex;
   gap: 4px;
 }
 
-.card_promo {
+.card__promo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,38 +56,38 @@ body {
   font-weight: 600;
 }
 
-.card_promo__sale {
+.card__promo_sale {
   background-color: $primary;
   width: 56px;
   height: 23px;
 }
 
 
-.card_promo__day {
+.card__promo_day {
   background-color: $day-product;
   width: 83px;
   height: 23px;
 }
 
-.card_promo__sellout {
+.card__promo_sellout {
   background-color: $sellout-product;
   width: 98px;
   height: 23px;
   padding: 0 10px 0 10px;
 }
 
-.card_promo__hit {
+.card__promo_hit {
   background-color: $hit-product;
   width: 44px;
   height: 23px;
 }
 
-.card_footer {
+.card__footer {
   position: absolute;
   width: 100%;
   display: flex;
 }
 
-.card_application {
+.card__application {
   cursor: pointer;
 }

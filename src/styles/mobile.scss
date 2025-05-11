@@ -20,11 +20,11 @@ $sellout-product: #39b0f4;
       align-items: center;
       margin-bottom: 94px;
 
-      .video_preview {
+      .video__preview {
         width: 100%;
       }
 
-      .video_button {
+      .video__button {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -37,33 +37,33 @@ $sellout-product: #39b0f4;
         transform: skewX(-20deg);
       }
 
-      .playIcon {
+      .video__play-icon {
         padding-top: 1px;
       }
     }
 
-    .cards-container {
+    .card__container {
       width: 100%;
       margin-bottom: 13px;
 
-      .card_image {
+      .card__image {
         width: 100%;
         border-radius: 5px;
       }
 
-      .card_header__left {
+      .card__header-left {
         display: flex;
         flex-direction: column;
         gap: 12px;
       }
 
-      .card_title {
+      .card__title {
         padding-top: 4px;
         font-size: 20px;
         font-weight: 600;
       }
 
-      .card_header__right {
+      .card__header-right {
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -75,7 +75,7 @@ $sellout-product: #39b0f4;
         color: $text-color;
       }
 
-      .card_footer {
+      .card__footer {
         position: absolute;
         width: 100%;
         display: flex;
@@ -86,19 +86,17 @@ $sellout-product: #39b0f4;
         bottom: 0px;
         color: $text-color;
 
-        .cards_promo-tablet {
+        .card__promos_tablet {
           display: none;
         }
       }
 
-     
-
-      .card_price {
+      .card__price {
         font-size: 20px;
         font-weight: 700;
       }
 
-      .card_application {
+      .card__application {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -113,17 +111,17 @@ $sellout-product: #39b0f4;
       }
     }
 
-    .middle-col {
+    .products-grid__col_middle {
       margin-bottom: -16px;
     }
 
-    .slider-container {
+    .slider {
       width: 100%;
       overflow: hidden;
       position: relative;
       padding: 20px 0;
     }
-    .slider-track {
+    .slider__track {
       display: flex;
       flex-direction: row;
       transition: transform 0.3s ease;
@@ -160,24 +158,25 @@ $sellout-product: #39b0f4;
       font-weight: 700;
     }
 
-    .card_application-slider {
+    .product-card__application {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 200px;
       height: 40px;
       margin: 0 auto 18px auto;
+      border: none;
       border-radius: 5px;
       background-color: $primary;
       color: $text-color;
     }
 
-    .slider-dots {
+    .slider__dots {
       display: flex;
       justify-content: center;
       margin-top: 20px;
     }
-    .slider-dot {
+    .slider__dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
@@ -186,49 +185,59 @@ $sellout-product: #39b0f4;
       opacity: 0.5;
       transition: opacity 0.3s ease;
     }
-    .slider-dot.active {
+    .slider__dot.active {
       opacity: 1;
     }
 
-    .card_header {
-      position: absolute;
-      display: flex;
-      justify-content: space-between;
-      color: $text-color;
-      top: 0;
+    .product-card__header {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-left: 14px;
+        color: $text-color;
     }
 
-    .card_header__left-slider {
-      padding-top: 6px;
+    .product-card__header-left {
+      padding-top: 3px;
 
-      .mobile-hide {
+      .product-card__promo_hide-mobile {
         display: none;
       }
     }
 
-    .card_header__right-slider {
+    .product-card__header-right {
       display: flex;
       flex-direction: column;
       gap: 10px;
       padding: 5px 13px 0 0;
-
-      
     }
 
-    .slider-cards-promo {
+    .product-card__promos {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 4px;
     }
 
-    .slider-card-promo__day {
+    .product-card__promo_day {
+      background-color: $day-product;
       width: 103px;
+      height: 26px;
       font-size: 16px;
     }
 
-    .slider-card-promo__sale {
+    .product-card__promo_sale {
+      background-color: $primary;
       width: 72px;
+      height: 26px;
       font-size: 16px;
+    }
+
+    .product-card__promo_hit {
+      background-color: $hit-product;
+      width: 44px;
+      height: 23px;
     }
   }
 }

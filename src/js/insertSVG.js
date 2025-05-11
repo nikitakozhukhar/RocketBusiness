@@ -1,7 +1,7 @@
 function insertSVG() {
-  const play = document.querySelector('.playIcon')
-  const favourites = document.querySelectorAll('.card_favourite');
-  const eyes = document.querySelectorAll('.card_eye');
+  const play = document.querySelector('.video__play-icon')
+  const favourites = document.querySelectorAll('.card__favourite');
+  const eyes = document.querySelectorAll('.card__eye');
 
   // Добавление иконки play  
   const svgPlay = "http://www.w3.org/2000/svg";

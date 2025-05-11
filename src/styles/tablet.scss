@@ -25,7 +25,7 @@ $sellout-product: #39b0f4;
       width: 783px;
       height: 337px;
 
-      .video_button {
+      .video__button {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -41,53 +41,53 @@ $sellout-product: #39b0f4;
       }
     }
 
-    .tablet-container {
+    .products-grid {
       display: flex;
       flex-wrap: wrap;
       max-width: 785px;
-      gap: 20px;
-
-      .card_title {
-        font-size: 21px;
-      }
-
-      .card_header__right {
-        padding: 7px 12px 0 0;
-      }
+      gap: 18px;
     }
 
-    .tablete-hide {
+    .card__title {
+      font-size: 21px;
+    }
+
+    .card__header-right {
+      padding: 7px 12px 0 0;
+    }
+
+    .card__promos_hide-tablet {
       display: none;
     }
 
-    .card_image {
+    .card__image {
       width: 382px;
       border-radius: 5px;
     }
 
-    .card_image.peas {
+    .card__image_peas {
       height: 328px;
       object-fit: cover;
     }
 
-    .cards-container {
+    .card__container {
       gap: 10px;
     }
 
-    .cards_promo-tablet {
+    .card__promos_tablet {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
 
-    .card_price {
+    .card__price {
       align-self: flex-end;
       margin-bottom: 10px;
       color: $text-color;
       font-size: 20px;
     }
 
-    .card_application {
+    .card__application {
       display: flex;
       align-self: flex-end;
       align-items: center;
@@ -101,37 +101,94 @@ $sellout-product: #39b0f4;
       font-size: 12px;
     }
 
-    .left-col {
+    .products-grid__col_left {
       width: 382px;
     }
 
-    .middle-col {
+    .products-grid__col_middle {
       display: flex;
       gap: 20px;
       order: 3;
 
-      .card_image {
+      .card__image {
         height: 154px;
+      }
+      .card__promo_hide-tablet {
+        display: none;
       }
     }
 
-    .card_footer {
+    .card__footer {
       justify-content: space-between;
       gap: 15px;
       padding: 0 15px 0 15px;
       bottom: 10px;
     }
 
-    .right-col {
+    .products-grid__col_right {
       width: 362px;
       height: 328px;
 
       .product-card {
+        width: 181px;
         border-radius: 5px;
         background-color: $text-color;
       }
 
+      .product-card__header {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 7px;
+        padding-left: 14px;
+        top: 0px;
+        color: $text-color;
+      }
+
+      .product-card__promos {
+        display: flex;
+        gap: 4px;
+      }
+
+      .card__promo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .product-card__promo_sale {
+        background-color: $primary;
+        width: 56px;
+        height: 23px;
+      }
+
+      .product-card__promo_day {
+        background-color: $day-product;
+        width: 83px;
+        height: 23px;
+      }
+
+      .product-card__promo_hit {
+        background-color: $hit-product;
+        width: 44px;
+        height: 23px;
+      }
+
+      .product-card__promo_hide-tablet {
+        display: none;
+      }
+
+      .product-card__header-right {
+        padding: 7px 12px 0 0;
+      }
+
       .product-card__image {
+        max-width: 181px;
         border-radius: 5px 5px 0px 0px;
       }
 
@@ -146,31 +203,25 @@ $sellout-product: #39b0f4;
         font-size: 20px;
       }
 
-      .card_application {
+      .product-card__application {
         align-self: center;
+        align-items: center;
         width: 150px;
+        height: 32px;
         margin-bottom: 12px;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary;
+        color: $text-color;
+        font-size: 12px;
       }
     }
 
-    .slider-track {
+    .slider__track {
       display: flex;
       gap: 20px;
     }
-
-    .product-card {
-      width: 181px;
-    }
-
-    .product-card__image {
-      max-width: 181px;
-    }
-    
   }
-
-  // .disable-scroll {
-  //     overflow: hidden;
-  //   }
 
   .form {
     background: rgba(#000, 0.8);
