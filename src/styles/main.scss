@@ -60,6 +60,7 @@ body {
   background-color: $primary;
   width: 56px;
   height: 23px;
+  color: $text-color;
 }
 
 
@@ -67,6 +68,7 @@ body {
   background-color: $day-product;
   width: 83px;
   height: 23px;
+  color: $text-color;
 }
 
 .card__promo_sellout {
@@ -74,12 +76,14 @@ body {
   width: 98px;
   height: 23px;
   padding: 0 10px 0 10px;
+  color: $text-color;
 }
 
 .card__promo_hit {
   background-color: $hit-product;
   width: 44px;
   height: 23px;
+  color: $text-color;
 }
 
 .card__footer {

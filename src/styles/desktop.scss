@@ -157,6 +157,7 @@ $sellout-product: #39b0f4;
       .product-card__promos {
         display: flex;
         flex-direction: column;
+        gap: 7px;
       }
       .card__promo {
         display: flex;

@@ -1,6 +1,6 @@
 const body = document.querySelector('.body');
 const form = document.querySelector('.form');
-const openFormBtns = document.querySelectorAll('.card_application');
+const openFormBtns = document.querySelectorAll('.card__application');
 const closeFormBtn = document.querySelector('.form_close');
 
 

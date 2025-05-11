@@ -12,6 +12,7 @@ import './styles/videoFrame.scss';
 import './js/app';
 import './js/insertSVG';
 import './js/slider';
+import './js/switchSalePromoColor';
 import './js/formActions';
 import './js/startVideo';
 
