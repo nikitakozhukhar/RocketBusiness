@@ -94,6 +94,7 @@ $sellout-product: #39b0f4;
       justify-content: center;
       width: 141px;
       height: 32px;
+      border: none;
       border-radius: 5px;
       background-color: $primary;
       color: $text-color;
@@ -125,8 +126,13 @@ $sellout-product: #39b0f4;
       width: 362px;
       height: 328px;
 
-      .product-card__image {
+      .product-card {
         border-radius: 5px;
+        background-color: $text-color;
+      }
+
+      .product-card__image {
+        border-radius: 5px 5px 0px 0px;
       }
 
       .product-card__title {
@@ -141,8 +147,9 @@ $sellout-product: #39b0f4;
       }
 
       .card_application {
-        width: 150px;
         align-self: center;
+        width: 150px;
+        margin-bottom: 12px;
       }
     }
 

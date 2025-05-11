@@ -43,9 +43,6 @@ $sellout-product: #39b0f4;
     }
 
     .cards-container {
-      // position: relative;
-      // display: flex;
-      // flex-direction: column;
       width: 100%;
       margin-bottom: 13px;
 
@@ -53,17 +50,6 @@ $sellout-product: #39b0f4;
         width: 100%;
         border-radius: 5px;
       }
-
-      // .card_header {
-      //   position: absolute;
-      //   width: 100%;
-      //   display: flex;
-      //   justify-content: space-between;
-      //   padding-top: 7px;
-      //   padding-left: 14px;
-      //   top: 0px;
-      //   color: $text-color;
-      // }
 
       .card_header__left {
         display: flex;
@@ -78,48 +64,11 @@ $sellout-product: #39b0f4;
       }
 
       .card_header__right {
-        padding: 12px 8px 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 6px 12px 0 0;
       }
-
-      // .cards_promo {
-      //   display: flex;
-      //   gap: 4px;
-      // }
-
-      // .card_promo {
-      //   display: flex;
-      //   justify-content: center;
-      //   align-items: center;
-      //   padding: 0 5px;
-      //   border-radius: 50px;
-      //   font-size: 12px;
-      //   font-weight: 600;
-      // }
-
-      // .card_promo__sale {
-
-      //   background-color: $primary;
-      //   width: 56px;
-      //   height: 23px;
-      // }
-
-      // .card_promo__day {
-      //   background-color: $day-product;
-      //   width: 83px;
-      //   height: 23px;
-      // }
-
-      // .card_promo__sellout {
-      //   background-color: $sellout-product;
-      //   width: 83px;
-      //   height: 23px;
-      // }
-
-      // .card_promo__hit {
-      //   background-color: $hit-product;
-      //   width: 44px;
-      //   height: 23px;
-      // }
 
       .svg-icon {
         transition: all 0.3s ease;
@@ -169,8 +118,6 @@ $sellout-product: #39b0f4;
     }
 
     .slider-container {
-      // display: flex;
-      // flex-direction: row;
       width: 100%;
       overflow: hidden;
       position: relative;
