@@ -2,116 +2,90 @@ const body = document.querySelector('.body');
 const form = document.querySelector('.form');
 const openFormBtns = document.querySelectorAll('.card__application');
 const closeFormBtn = document.querySelector('.form_close');
+const formContainer = document.querySelector('.form_container');
 
-const formContainer = document.querySelector('.form_container')
-
-const formInputs = document.querySelectorAll('.form_input');
 const nameField = document.querySelector('.name_input');
 const phoneField = document.querySelector('.phone_input');
 const personalDataField = document.querySelector('.form_footer_checkbox');
 const formBtn = document.querySelector('.form_footer_button');
 
-function openForm() {
-  form.classList.add('form_visible');
-  body.style.overflow = 'hidden'
-}
+const errorMessageName = document.querySelector('.name_input-error');
+const errorMessagePhone = document.querySelector('.phone_input-error');
+const personalData = document.querySelector('.form_footer_personal');
 
-function closeForm() {
-  form.classList.remove('form_visible');
-  body.style.overflow = ''
-}
+const nameValidationRegex = /^[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё0-9]*$/;
 
-function disabledDelay(delay) {
-  setTimeout(() => {
-    formBtn.classList.remove('btn-disabled');
-    formBtn.removeAttribute('disabled')
-  }, delay)
-}
-
-function formInputValidation() {
-  const errorMessageName = document.querySelector('.name_input-error');
-  const errorMessagePhone = document.querySelector('.phone_input-error');
-  const personalData = document.querySelector('.form_footer_personal')
-
-  const nameValidationSсhema = /^[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё0-9]*$/
-  let isValidName = false;
-  let isValidPhone = false;
-  let isCheckedPersonalData = personalDataField.checked;
-
-  if (nameField.value.length <= 2 && !nameValidationSсhema.test(nameField.value)) {
-    errorMessageName.style.display = 'block';
+const setErrorState = (element, errorElement, condition) => {
+  if (condition) {
+    element.classList.add('error');
+    errorElement.style.display = 'block';
     formBtn.classList.add('btn-disabled');
-    nameField.classList.add('error');
     formBtn.setAttribute('disabled', true);
-
-    formContainer.style.boxShadow = '5px 5px 20px red, -5px -5px 20px red'
-
-    disabledDelay(2000)
+    formContainer.style.boxShadow = '5px 5px 20px red, -5px -5px 20px red';
+    setTimeout(() => {
+      formBtn.classList.remove('btn-disabled');
+      formBtn.removeAttribute('disabled');
+    }, 2000);
+    return false;
   } else {
-    errorMessageName.style.display = 'none';
-    nameField.classList.remove('error');
-    formContainer.style.boxShadow = 'none'
-    isValidName = true;
+    element.classList.remove('error');
+    errorElement.style.display = 'none';
+    formContainer.style.boxShadow = 'none';
+    return true;
   }
+};
 
-  if (phoneField.value.trim().length < 12 && phoneField.value !== Number) {
-    errorMessagePhone.style.display = 'block';
-    formBtn.classList.add('btn-disabled');
-    phoneField.classList.add('error');
-    formBtn.setAttribute('disabled', true)
-    formContainer.style.boxShadow = '5px 5px 20px red, -5px -5px 20px red'
-    disabledDelay(2000)
-  } else {
-    errorMessagePhone.style.display = 'none';
-    phoneField.classList.remove('error');
-    formContainer.style.boxShadow = 'none'
-    isValidPhone = true;
-  }
+const openForm = () => {
+  form.classList.add('form_visible');
+  body.style.overflow = 'hidden';
+};
+
+const closeForm = () => {
+  form.classList.remove('form_visible');
+  body.style.overflow = '';
+};
+
+const formInputValidation = () => {
+  const isValidName = setErrorState(
+    nameField,
+    errorMessageName,
+    nameField.value.length <= 2 || !nameValidationRegex.test(nameField.value)
+  );
+
+  const isValidPhone = setErrorState(
+    phoneField,
+    errorMessagePhone,
+    phoneField.value.trim().length < 12 || isNaN(phoneField.value.trim())
+  );
+
+  const isCheckedPersonalData = personalDataField.checked;
 
   if (!isCheckedPersonalData) {
     personalData.classList.add('error_text');
-    formContainer.style.boxShadow = '5px 5px 20px red, -5px -5px 20px red' 
+    formContainer.style.boxShadow = '5px 5px 20px red, -5px -5px 20px red';
   } else {
     personalData.classList.remove('error_text');
-    formContainer.style.boxShadow = 'none'
+    formContainer.style.boxShadow = 'none';
   }
 
-  return {
-    isValidName, isValidPhone, isCheckedPersonalData
-  }
+  return { isValidName, isValidPhone, isCheckedPersonalData };
+};
 
-}
-
-function submiteForm(e) {
+const submitForm = (e) => {
   e.preventDefault();
-
   const { isValidName, isValidPhone, isCheckedPersonalData } = formInputValidation();
 
-  if (!isValidName) {
-    console.error('Не введено имя пользователя')
-  }
-
-  if (!isValidPhone) {
-    console.error('Введен не корректный номер телефона')
-  }
-
   if (isValidName && isValidPhone && isCheckedPersonalData) {
-    const data = new FormData();
-
-    data.name = nameField.value;
-    data.phone = phoneField.value;
-    data.personal = personalDataField.checked;
     closeForm();
     nameField.value = '';
     phoneField.value = '';
     personalDataField.checked = false;
   }
+};
 
-}
-
-openFormBtns.forEach(openBtn => openBtn.addEventListener('click', openForm));
+openFormBtns.forEach(btn => btn.addEventListener('click', openForm));
 closeFormBtn.addEventListener('click', closeForm);
-form.addEventListener('submit', submiteForm);
-document.addEventListener('keydown', (event) => {
-  event.code === `Escape` ? closeForm() : null
-})
+form.addEventListener('submit', submitForm);
+document.addEventListener('keydown', e => {
+  if (e.code === 'Escape') closeForm();
+});
