@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         dotsContainer.innerHTML = '';
         cards.forEach((_, index) => {
             const dot = document.createElement('div');
-            dot.classList.add('slider-dot');
+            dot.classList.add('slider__dot');
             if (index === currentSlide) dot.classList.add('active');
             dotsContainer.appendChild(dot);
         });
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Обновление точек
-        document.querySelectorAll('.slider-dot').forEach((dot, index) => {
+        document.querySelectorAll('.slider__dot').forEach((dot, index) => {
             dot.classList.toggle('active', index === currentSlide);
         });
     }
