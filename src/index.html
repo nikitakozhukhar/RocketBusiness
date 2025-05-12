@@ -31,12 +31,15 @@
         <button class="video__button">
           Смотреть видео <span class="video__play-icon"></span>
         </button>
-         <div class="modal__choice-src modal__choice-src_hidden">
-            <button class="modal__video-button" data-video="youtube">Смотреть с YouTube</button>
-            <button class="modal__video-button" data-video="rutube">Смотреть с RuTube</button>
-          </div>
+        <div class="modal__choice-src modal__choice-src_hidden">
+          <button class="modal__video-button" data-video="youtube">
+            Смотреть с YouTube
+          </button>
+          <button class="modal__video-button" data-video="rutube">
+            Смотреть с RuTube
+          </button>
+        </div>
         <div class="modal modal_hidden" id="videoModal">
-         
           <div class="modal__content">
             <span class="modal__close-btn" id="closeModalBtn">&times;</span>
             <iframe
@@ -226,7 +229,9 @@
                 <div class="product-card__header">
                   <div class="product-card__header-left">
                     <div class="product-card__promos">
-                      <div class="card__promo product-card__promo product-card__promo_hit">
+                      <div
+                        class="card__promo product-card__promo product-card__promo_hit"
+                      >
                         Хит
                       </div>
                     </div>
@@ -245,44 +250,46 @@
       </div>
     </div>
 
-    <form class="form hide-form">
-      <div class="form_container">
-        <div class="form_header">
-          <h2 class="form_title">Оставьте заявку</h2>
-          <button class="form_close"></button>
-        </div>
-        <div class="form_input-area">
-          <input
-            class="form_input name_input"
-            type="text"
-            placeholder="Ваше имя"
-          />
-          <div class="error_message name_input-error">
-            Введите данные в правильном формате
+    <form class="form">
+      <div class="form_overlay">
+        <div class="form_container">
+          <div class="form_header">
+            <h2 class="form_title">Оставьте заявку</h2>
+            <button class="form_close"></button>
           </div>
-        </div>
-        <div class="form_input-area">
-          <input
-            class="form_input phone_input"
-            type="tel"
-            placeholder="+7 (xxx) xxx xx xx"
-          />
-          <div class="error_message phone_input-error">
-            Введите номер телефона как в подсказке
+          <div class="form_input-area">
+            <input
+              class="form_input name_input"
+              type="text"
+              placeholder="Ваше имя"
+            />
+            <div class="error_message name_input-error">
+              Введите данные в правильном формате
+            </div>
           </div>
-        </div>
+          <div class="form_input-area">
+            <input
+              class="form_input phone_input"
+              type="tel"
+              placeholder="+7 (xxx) xxx xx xx"
+            />
+            <div class="error_message phone_input-error">
+              Введите номер телефона как в подсказке
+            </div>
+          </div>
 
-        <div class="form_footer">
-          <input
-            class="form_footer_checkbox"
-            type="checkbox"
-            name="personalData"
-            id="personalData"
-          />
-          <label class="form_footer_personal" for="personalData"
-            >Я соглашаюсь на обработку персональных данных</label
-          >
-          <button class="form_footer_button">Отправить</button>
+          <div class="form_footer">
+            <input
+              class="form_footer_checkbox"
+              type="checkbox"
+              name="personalData"
+              id="personalData"
+            />
+            <label class="form_footer_personal" for="personalData"
+              >Я соглашаюсь на обработку персональных данных</label
+            >
+            <button class="form_footer_button">Отправить</button>
+          </div>
         </div>
       </div>
     </form>

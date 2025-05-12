@@ -3,6 +3,7 @@ const form = document.querySelector('.form');
 const openFormBtns = document.querySelectorAll('.card__application');
 const closeFormBtn = document.querySelector('.form_close');
 
+const formContainer = document.querySelector('.form_container')
 
 const formInputs = document.querySelectorAll('.form_input');
 const nameField = document.querySelector('.name_input');
@@ -11,14 +12,12 @@ const personalDataField = document.querySelector('.form_footer_checkbox');
 const formBtn = document.querySelector('.form_footer_button');
 
 function openForm() {
-  const topOffset = window.pageYOffset;
-  form.classList.remove('hide-form');
-  form.style.top = `${topOffset}px`;
+  form.classList.add('form_visible');
   body.style.overflow = 'hidden'
 }
 
 function closeForm() {
-  form.classList.add('hide-form');
+  form.classList.remove('form_visible');
   body.style.overflow = ''
 }
 
@@ -43,28 +42,39 @@ function formInputValidation() {
     errorMessageName.style.display = 'block';
     formBtn.classList.add('btn-disabled');
     nameField.classList.add('error');
-    formBtn.setAttribute('disabled', true)
+    formBtn.setAttribute('disabled', true);
+
+    formContainer.style.boxShadow = '5px 5px 20px red, -5px -5px 20px red'
+
     disabledDelay(2000)
   } else {
     errorMessageName.style.display = 'none';
     nameField.classList.remove('error');
+    formContainer.style.boxShadow = 'none'
     isValidName = true;
   }
-
 
   if (phoneField.value.trim().length < 12 && phoneField.value !== Number) {
     errorMessagePhone.style.display = 'block';
     formBtn.classList.add('btn-disabled');
     phoneField.classList.add('error');
     formBtn.setAttribute('disabled', true)
+    formContainer.style.boxShadow = '5px 5px 20px red, -5px -5px 20px red'
     disabledDelay(2000)
   } else {
     errorMessagePhone.style.display = 'none';
     phoneField.classList.remove('error');
+    formContainer.style.boxShadow = 'none'
     isValidPhone = true;
   }
 
-  !isCheckedPersonalData ? personalData.classList.add('error_text') : personalData.classList.remove('error_text');
+  if (!isCheckedPersonalData) {
+    personalData.classList.add('error_text');
+    formContainer.style.boxShadow = '5px 5px 20px red, -5px -5px 20px red' 
+  } else {
+    personalData.classList.remove('error_text');
+    formContainer.style.boxShadow = 'none'
+  }
 
   return {
     isValidName, isValidPhone, isCheckedPersonalData
