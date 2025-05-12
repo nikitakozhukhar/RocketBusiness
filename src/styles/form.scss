@@ -1,8 +1,4 @@
-$bg-color: #ffffff;
-$text-color: #444444;
-$border-form: #E6E6E6;
-$error-color: #E44B4B;
-$btn-active: #18c576;
+@use './variables' as *;
 
 .form {
   position: absolute;
@@ -14,12 +10,12 @@ $btn-active: #18c576;
   height: 100vh;
   padding: 10px;
   background: rgba(#000, 0.8);
-  color: $text-color; 
+  color: $text-form; 
 
   .form_container {
     padding: 14px 12px;
     border-radius: 5px;
-    background-color: $bg-color;
+    background-color: $bg-form;
 
     .form_header {
       display: flex;
@@ -44,7 +40,7 @@ $btn-active: #18c576;
           display: block;
           width: 1px;
           height: 20px;
-          background-color: $text-color;
+          background-color: $text-form;
           transform: rotate(-45deg)
         }
          &:after {
@@ -55,7 +51,7 @@ $btn-active: #18c576;
           display: block;
           width: 1px;
           height: 20px;
-          background-color: $text-color;
+          background-color: $text-form;
           transform: rotate(45deg);
         }
       }
@@ -71,27 +67,27 @@ $btn-active: #18c576;
       padding: 12px;
       border-radius: 5px;
       border: 1px solid $border-form;
-      color: $text-color;
+      color: $text-form;
 
       &:focus {
-        border-color: $text-color;
+        border-color: $text-form;
         outline: none;
       }
     }
 
     .error {
-      border: 1px solid $error-color;
+      border: 1px solid $error-form;
     }
 
     .error_message {
       display: none;
       padding-left: 12px ;
       font-size: 10px ;
-      color: $error-color
+      color: $error-form;
     }
 
     .error_text {
-      color: $error-color;
+      color: $error-form;
     }
 
     .form_footer {
@@ -112,10 +108,10 @@ $btn-active: #18c576;
         padding: 13px 20px;
         border-radius: 5px;
         border: none;
-        background: $btn-active;
+        background: $primary;
         font-size: 12px;
         font-weight: 700;
-        color: $bg-color;
+        color: $bg-form;
         cursor: pointer;
       }
 

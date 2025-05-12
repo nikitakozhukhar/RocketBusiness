@@ -1,8 +1,4 @@
-$primary: #18c576;
-$text-color: #ffffff;
-$day-product: #ffa726;
-$hit-product: #ac59f1;
-$sellout-product: #39b0f4;
+@use "./variables" as *;
 
 @media (max-width: 959px) {
   .container {
@@ -10,7 +6,7 @@ $sellout-product: #39b0f4;
     flex-direction: column;
     justify-content: center;
     padding-left: 6px;
-    margin: 48px auto 0px auto;
+    margin: 48px auto 20px auto;
     max-width: 331px;
 
     .video {
@@ -36,7 +32,6 @@ $sellout-product: #39b0f4;
         font-weight: 500;
         transform: skewX(-20deg);
       }
-      
 
       .video__play-icon {
         padding-top: 1px;
@@ -46,7 +41,7 @@ $sellout-product: #39b0f4;
         display: flex;
         flex-direction: column;
       }
-      
+
       .modal__choice-src_hidden {
         display: none;
       }
@@ -81,11 +76,6 @@ $sellout-product: #39b0f4;
         flex-direction: column;
         gap: 5px;
         padding: 6px 12px 0 0;
-      }
-
-      .svg-icon {
-        transition: all 0.3s ease;
-        color: $text-color;
       }
 
       .card__footer {
@@ -147,6 +137,12 @@ $sellout-product: #39b0f4;
       border-radius: 5px;
       background: $text-color;
       transition: opacity 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
     }
 
     .product-card__image {
@@ -200,6 +196,7 @@ $sellout-product: #39b0f4;
     }
     .slider__dot.active {
       opacity: 1;
+      transform: scale(1.1);
     }
 
     .product-card__header {

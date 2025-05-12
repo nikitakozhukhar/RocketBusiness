@@ -1,8 +1,4 @@
-$primary: #18c576;
-$text-color: #ffffff;
-$day-product: #ffa726;
-$hit-product: #ac59f1;
-$sellout-product: #39b0f4;
+@use './variables' as *;
 
 @media (min-width: 960px) and (max-width: 1439px) {
   .container {
@@ -131,8 +127,8 @@ $sellout-product: #39b0f4;
     .products-grid__col_right {
       width: 362px;
       height: 328px;
-
-      .product-card {
+    }
+    .product-card {
         width: 181px;
         border-radius: 5px;
         background-color: $text-color;
@@ -217,12 +213,7 @@ $sellout-product: #39b0f4;
         background-color: $primary;
         color: $text-color;
         font-size: 12px;
-        
-        &:hover {
-          background-color: #1dae2c;
-        }
       }
-    }
 
     .slider__track {
       display: flex;
