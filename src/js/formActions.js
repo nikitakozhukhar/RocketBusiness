@@ -29,7 +29,6 @@ function disabledDelay(delay) {
   }, delay)
 }
 
-
 function formInputValidation() {
   const errorMessageName = document.querySelector('.name_input-error');
   const errorMessagePhone = document.querySelector('.phone_input-error');
@@ -103,3 +102,6 @@ function submiteForm(e) {
 openFormBtns.forEach(openBtn => openBtn.addEventListener('click', openForm));
 closeFormBtn.addEventListener('click', closeForm);
 form.addEventListener('submit', submiteForm);
+document.addEventListener('keydown', (event) => {
+  event.code === `Escape` ? closeForm() : null
+})
